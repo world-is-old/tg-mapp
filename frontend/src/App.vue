@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import {useWebApp} from 'vue-tg'
+
+const {initData} = useWebApp()
 </script>
 
 <template>
@@ -10,6 +12,7 @@ import TheWelcome from './components/TheWelcome.vue'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
+    <div>Init: {{initData}}</div>
   </header>
   
 </template>
